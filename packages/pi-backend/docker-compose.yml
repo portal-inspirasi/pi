@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  be:
+    container_name: be
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APP_PORT=4000
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=pi_db
