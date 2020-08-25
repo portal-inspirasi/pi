@@ -26,7 +26,12 @@ const main = async (): Promise<void> => {
 
   await createConnection();
   const schema = await buildSchema({
-    resolvers: [SayHelloResolver, CreateAuthorResolver, ReadAuthorResolver, UpdateAuthorResolver]
+    resolvers: [
+      SayHelloResolver,
+      CreateAuthorResolver,
+      ReadAuthorResolver,
+      UpdateAuthorResolver
+    ]
   });
 
   const apolloServer = new ApolloServer({
