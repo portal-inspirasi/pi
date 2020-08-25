@@ -21,15 +21,6 @@
     "type-graphql": "^1.0.0-rc.3",
     "typeorm": "^0.2.25"
   },
-  "devDependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.7",
-    "@types/graphql": "^14.5.0",
-    "@types/node": "^14.0.27",
-    "ts-node": "^8.10.2",
-    "ts-node-dev": "^1.0.0-pre.56",
-    "typescript": "^3.9.7"
-  },
   "prettier": {
     "semi": true,
     "arrowParens": "always",
@@ -37,5 +28,47 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "printWidth": 80
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "no-console": "off",
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ]
+    },
+    "settings": {
+      "import/extensions": [
+        ".ts"
+      ],
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts"
+        ]
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts"
+          ]
+        }
+      }
+    }
   }
 }
