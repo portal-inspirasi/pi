@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "eslint:recommended",
+    "plugin:nuxt/recommended",
+    "prettier/vue",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-console": "off",
+    "vue/max-attributes-per-line": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

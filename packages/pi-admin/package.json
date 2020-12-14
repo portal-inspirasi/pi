@@ -1,0 +1,85 @@
+{
+  "name": "pi-admin",
+  "version": "0.0.1",
+  "description": "Dashboard Portal Inspirasi App",
+  "author": "trastanechora",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.7.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^4.1.1",
+    "vuex": "^3.5.1",
+    "vuex-persistedstate": "^4.0.0-beta.1",
+    "xlsx": "^0.16.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "@nuxtjs/eslint-config-typescript",
+      "prettier",
+      "prettier/vue",
+      "plugin:prettier/recommended",
+      "plugin:nuxt/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {}
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1",
+      "^~/(.*)$": "<rootDir>/$1",
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "vue",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/components/**/*.vue",
+      "<rootDir>/pages/**/*.vue",
+      "<rootDir>/layouts/*.vue",
+      "<rootDir>/@utils/*.ts",
+      "<rootDir>/store/*.ts"
+    ],
+    "coverageReporters": [
+      "html",
+      "text",
+      "lcov"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "printWidth": 80
+  }
+}
